@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rithvik Jayanthi | Finance & Investment Research</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Rithvik Jayanthi, a Rutgers Business School finance student focused on investment research, valuation, and financial markets."
+  />
+
+  <style>
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    :root {
+      --navy: #071526;
+      --navy-2: #0c1d33;
+      --navy-3: #122941;
+
+      --blue: #4472ff;
+      --blue-light: #8ba8ff;
+
+      --gold: #c8a35d;
+      --gold-soft: #efe4cc;
+
+      --white: #ffffff;
+      --off-white: #f6f7f9;
+      --cream: #f4f0e8;
+
+      --text: #142033;
+      --muted: #687386;
+      --border: #dde2e8;
+
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+
+      color: var(--blue);
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+
+      margin-bottom: 60px;
+    }
+
+    .section-heading h2 {
+      margin-top: 15px;
+
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1.04;
+      letter-spacing: -3px;
+      font-weight: 720;
+
+      color: var(--navy);
+    }
+
+    .section-heading > p {
+      max-width: 520px;
+
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       NAV
+    ========================================================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(7, 21, 38, 0.93);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-inner {
+      height: 76px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: white;
+
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #b8c3d1;
+
+      font-size: 13px;
+      font-weight: 500;
+
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-contact {
+      color: var(--navy) !important;
+      background: white;
+
+      padding: 9px 16px;
+      border-radius: 6px;
+
+      font-weight: 700 !important;
+    }
+
+    .nav-contact:hover {
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 145px 0 90px;
+
+      color: white;
+
+      background:
+        radial-gradient(
+          circle at 80% 25%,
+          rgba(68, 114, 255, 0.26),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 65% 80%,
+          rgba(200, 163, 93, 0.1),
+          transparent 25%
+        ),
+        var(--navy);
+
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+      width: 600px;
+      height: 600px;
+
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 50%;
+
+      top: -200px;
+      right: -200px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 85px;
+
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 7px 12px;
+
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 100px;
+
+      color: #b9c4d3;
+
+      font-size: 12px;
+      font-weight: 600;
+
+      margin-bottom: 34px;
+    }
+
+    .hero-kicker span {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #49d594;
+      box-shadow: 0 0 0 4px rgba(73, 213, 148, 0.08);
+    }
+
+    .hero-label {
+      color: var(--gold);
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.1px;
+
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(66px, 8vw, 112px);
+      line-height: 0.88;
+
+      letter-spacing: -6px;
+
+      font-weight: 720;
+    }
+
+    .hero h1 span {
+      color: var(--blue-light);
+    }
+
+    /* Personal Statement */
+    .personal-statement {
+      max-width: 700px;
+
+      margin-top: 35px;
+
+      color: #b9c4d4;
+
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      padding: 13px 20px;
+
+      border-radius: 7px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      color: var(--navy);
+      background: white;
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      background: var(--gold-soft);
+    }
+
+    .button-outline {
+      color: white;
+
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .button-outline:hover {
+      border-color: white;
+    }
+
+
+    /* HERO STATS */
+
+    .hero-panel {
+      border-radius: 16px;
+
+      padding: 35px;
+
+      background: rgba(255, 255, 255, 0.055);
+
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      backdrop-filter: blur(10px);
+    }
+
+    .panel-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-bottom: 22px;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .panel-heading span:first-child {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+
+      color: #8291a6;
+    }
+
+    .panel-heading span:last-child {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .big-stat {
+      padding: 28px 0;
+    }
+
+    .big-stat strong {
+      display: block;
+
+      font-size: 74px;
+      line-height: 1;
+
+      letter-spacing: -5px;
+    }
+
+    .big-stat span {
+      display: block;
+
+      margin-top: 7px;
+
+      color: #8392a8;
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .mini-stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 1px;
+
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .mini-stat {
+      background: var(--navy-2);
+
+      padding: 23px 18px;
+    }
+
+    .mini-stat strong {
+      display: block;
+
+      font-size: 21px;
+    }
+
+    .mini-stat span {
+      color: #8392a8;
+
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    .hero-focus {
+      margin-top: 28px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .hero-focus span {
+      padding: 6px 10px;
+
+      border-radius: 100px;
+
+      border: 1px solid rgba(255, 255, 255, 0.11);
+
+      color: #a8b5c7;
+
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+
+      gap: 90px;
+    }
+
+    .about-title {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+
+      color: var(--blue);
+    }
+
+    .about-copy {
+      font-size: 28px;
+      line-height: 1.5;
+
+      letter-spacing: -0.8px;
+
+      color: var(--navy);
+    }
+
+    .about-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 40px;
+
+      margin-top: 45px;
+
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .experience {
+      background: var(--off-white);
+    }
+
+    .experience-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .experience-row {
+      display: grid;
+      grid-template-columns: 70px 0.7fr 1.3fr;
+
+      gap: 35px;
+
+      padding: 45px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .experience-number {
+      color: #9aa4b1;
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .experience-company h3 {
+      color: var(--navy);
+
+      font-size: 24px;
+      letter-spacing: -0.8px;
+
+      margin-bottom: 4px;
+    }
+
+    .experience-company p {
+      color: var(--blue);
+
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .experience-content p {
+      color: var(--muted);
+      font-size: 14px;
+
+      margin-bottom: 17px;
+    }
+
+    .experience-content ul {
+      display: grid;
+      gap: 9px;
+    }
+
+    .experience-content li {
+      position: relative;
+
+      color: #485466;
+
+      padding-left: 18px;
+
+      font-size: 13px;
+    }
+
+    .experience-content li::before {
+      content: "—";
+
+      position: absolute;
+      left: 0;
+
+      color: var(--blue);
+    }
+
+
+    /* =========================================================
+       LEADERSHIP
+    ========================================================= */
+
+    .leadership-card {
+      margin-top: 60px;
+
+      background: var(--navy);
+
+      color: white;
+
+      padding: 48px;
+
+      border-radius: 15px;
+
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+
+      gap: 70px;
+    }
+
+    .leadership-card .eyebrow {
+      color: var(--gold);
+    }
+
+    .leadership-card h3 {
+      margin-top: 15px;
+
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -1.4px;
+    }
+
+    .leadership-card h4 {
+      color: var(--blue-light);
+
+      margin-top: 8px;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .leadership-description {
+      color: #aebaca;
+
+      font-size: 14px;
+    }
+
+    .leadership-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 14px;
+
+      margin-top: 29px;
+    }
+
+    .leadership-stat {
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+      padding-top: 16px;
+    }
+
+    .leadership-stat strong {
+      display: block;
+
+      font-size: 27px;
+    }
+
+    .leadership-stat span {
+      display: block;
+
+      color: #8392a8;
+
+      font-size: 10px;
+    }
+
+
+    /* =========================================================
+       PROJECTS
+    ========================================================= */
+
+    .projects {
+      background: var(--cream);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 24px;
+    }
+
+    .project {
+      min-height: 660px;
+
+      padding: 36px;
+
+      background: white;
+
+      border: 1px solid #dedbd3;
+
+      border-radius: 16px;
+
+      display: flex;
+      flex-direction: column;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+
+      box-shadow: 0 25px 70px rgba(7, 21, 38, 0.09);
+    }
+
+    .project-dark {
+      background: var(--navy);
+
+      color: white;
+
+      border-color: var(--navy);
+    }
+
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .project-type {
+      color: var(--blue);
+
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .project-dark .project-type {
+      color: var(--blue-light);
+    }
+
+    .project-rank {
+      display: inline-block;
+
+      margin-top: 9px;
+
+      background: var(--gold);
+
+      color: var(--navy);
+
+      padding: 5px 9px;
+
+      border-radius: 100px;
+
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .project-index {
+      color: #98a1ae;
+
+      font-size: 11px;
+    }
+
+    .project-ticker {
+      margin-top: 55px;
+
+      color: var(--gold);
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+    }
+
+    .project h3 {
+      font-size: 32px;
+      line-height: 1.16;
+      letter-spacing: -1.4px;
+
+      margin-top: 8px;
+    }
+
+    .project-description {
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.75;
+
+      margin-top: 23px;
+    }
+
+    .project-dark .project-description {
+      color: #aeb9c9;
+    }
+
+    .project-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      margin-top: 31px;
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-dark .project-metrics {
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .project-metric {
+      padding: 22px 9px 22px 0;
+    }
+
+    .project-metric strong {
+      display: block;
+
+      font-size: 20px;
+    }
+
+    .project-metric span {
+      display: block;
+
+      color: #8c97a5;
+
+      font-size: 9px;
+      line-height: 1.4;
+
+      margin-top: 4px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 25px;
+    }
+
+    .project-tags span {
+      padding: 6px 9px;
+
+      border-radius: 100px;
+
+      background: #f0f2f5;
+
+      color: #596474;
+
+      font-size: 9px;
+    }
+
+    .project-dark .project-tags span {
+      background: rgba(255, 255, 255, 0.07);
+
+      color: #b1bdcc;
+    }
+
+    .finding {
+      margin-top: 25px;
+
+      padding-left: 15px;
+
+      border-left: 3px solid var(--gold);
+    }
+
+    .finding small {
+      color: var(--gold);
+
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .finding p {
+      color: var(--muted);
+
+      margin-top: 4px;
+
+      font-size: 12px;
+    }
+
+    .project-link {
+      margin-top: auto;
+
+      padding-top: 26px;
+
+      border-top: 1px solid var(--border);
+
+      display: flex;
+      justify-content: space-between;
+
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .project-dark .project-link {
+      border-color: rgba(255, 255, 255, 0.12);
+
+      color: var(--blue-light);
+    }
+
+    .project-link span {
+      transition: 0.2s;
+    }
+
+    .project-link:hover span {
+      transform: translate(4px, -3px);
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills {
+      background: var(--navy);
+
+      color: white;
+    }
+
+    .skills .section-heading h2 {
+      color: white;
+    }
+
+    .skills .section-heading > p {
+      color: #a6b2c4;
+    }
+
+    .skills .eyebrow {
+      color: var(--gold);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .skill-card {
+      background: var(--navy-2);
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      border-radius: 12px;
+
+      padding: 30px;
+    }
+
+    .skill-card-number {
+      color: #75869d;
+
+      font-size: 10px;
+    }
+
+    .skill-card h3 {
+      font-size: 19px;
+
+      margin: 13px 0 24px;
+    }
+
+    .skill-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .skill-list li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      color: #aebaca;
+
+      font-size: 12px;
+    }
+
+    .skill-list li::before {
+      content: "";
+
+      width: 5px;
+      height: 5px;
+
+      border-radius: 50%;
+
+      background: var(--blue-light);
+    }
+
+    .language-bar {
+      margin-top: 42px;
+
+      padding-top: 25px;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+      display: flex;
+      justify-content: space-between;
+
+      color: #a2afc0;
+
+      font-size: 12px;
+    }
+
+    .language-bar strong {
+      color: white;
+    }
+
+
+    /* =========================================================
+       EDUCATION
+    ========================================================= */
+
+    .education {
+      background: white;
+    }
+
+    .education-card {
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      overflow: hidden;
+    }
+
+    .education-main {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 43px;
+    }
+
+    .education-label {
+      color: var(--blue);
+
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .education-main h3 {
+      margin-top: 8px;
+
+      color: var(--navy);
+
+      font-size: 36px;
+      letter-spacing: -1.6px;
+    }
+
+    .education-main p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    .gpa {
+      text-align: right;
+    }
+
+    .gpa strong {
+      display: block;
+
+      color: var(--blue);
+
+      font-size: 48px;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .gpa span {
+      color: var(--muted);
+
+      font-size: 10px;
+    }
+
+    .gpa small {
+      display: block;
+
+      margin-top: 6px;
+
+      color: var(--navy);
+
+      font-weight: 700;
+    }
+
+    .education-extra {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 50px;
+
+      padding: 32px 43px;
+
+      border-top: 1px solid var(--border);
+
+      background: var(--off-white);
+    }
+
+    .education-extra h4 {
+      color: var(--navy);
+
+      font-size: 10px;
+      letter-spacing: 1.4px;
+
+      margin-bottom: 10px;
+    }
+
+    .education-extra p {
+      color: var(--muted);
+
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      padding: 100px 0;
+
+      background: var(--blue);
+
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+
+      gap: 100px;
+
+      align-items: end;
+    }
+
+    .contact small {
+      color: #d5ddff;
+
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+    }
+
+    .contact h2 {
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1.04;
+      letter-spacing: -3px;
+
+      margin-top: 13px;
+    }
+
+    .contact-right p {
+      max-width: 450px;
+
+      color: #d7dfff;
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .email {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      max-width: 450px;
+
+      margin-top: 25px;
+
+      padding-bottom: 12px;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 24px 0;
+
+      background: var(--navy);
+
+      color: #78889f;
+
+      font-size: 10px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-inner a:hover {
+      color: white;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 920px) {
+
+      .nav-links a:not(.nav-contact) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .experience-row {
+        grid-template-columns: 50px 1fr;
+      }
+
+      .experience-content {
+        grid-column: 2;
+      }
+
+      .leadership-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        min-height: auto;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+
+    @media (max-width: 620px) {
+
+      .container {
+        width: min(var(--max-width), calc(100% - 30px));
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .nav-inner {
+        height: 66px;
+      }
+
+      .hero {
+        padding: 120px 0 70px;
+      }
+
+      .hero h1 {
+        font-size: 59px;
+        letter-spacing: -3.5px;
+      }
+
+      .personal-statement {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-panel {
+        padding: 25px;
+      }
+
+      .about-copy {
+        font-size: 23px;
+      }
+
+      .about-detail {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-row {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-content {
+        grid-column: auto;
+      }
+
+      .leadership-card {
+        padding: 30px 24px;
+      }
+
+      .leadership-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        padding: 25px;
+      }
+
+      .project-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .project-metric {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .project-metric:last-child {
+        border-bottom: none;
+      }
+
+      .project-dark .project-metric {
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .education-main {
+        flex-direction: column;
+        gap: 30px;
+
+        padding: 30px;
+      }
+
+      .gpa {
+        text-align: left;
+      }
+
+      .education-extra {
+        grid-template-columns: 1fr;
+
+        padding: 30px;
+      }
+
+      .language-bar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+
+
+<body>
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#home" class="brand">
+        RJ<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+
+        <a
+          href="mailto:rithvikjayanthi@gmail.com"
+          class="nav-contact"
+        >
+          Contact
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <header class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="hero-kicker">
+          <span></span>
+          Rutgers Business School · Finance
+        </div>
+
+        <div class="hero-label">
+          FINANCE · RESEARCH · INVESTING
+        </div>
+
+        <h1>
+          Rithvik<br />
+          <span>Jayanthi.</span>
+        </h1>
+
+        <!-- RUBRIC: PERSONAL STATEMENT -->
+        <p class="personal-statement">
+          I am a Rutgers Business School finance student interested in
+          investment research, valuation, and using fundamental analysis
+          to develop independent views on companies and financial markets.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#projects" class="button button-primary">
+            Explore My Research
+            <span>↓</span>
+          </a>
+
+          <a
+            href="mailto:rithvikjayanthi@gmail.com"
+            class="button button-outline"
+          >
+            Get In Touch
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <aside class="hero-panel">
+
+        <div class="panel-heading">
+          <span>PROFILE</span>
+          <span>At a glance</span>
+        </div>
+
+        <div class="big-stat">
+          <strong>4.0</strong>
+          <span>GPA / 4.0</span>
+        </div>
+
+        <div class="mini-stat-grid">
+
+          <div class="mini-stat">
+            <strong>Top 4</strong>
+            <span>Bender Trust Stock Pitch</span>
+          </div>
+
+          <div class="mini-stat">
+            <strong>50+</strong>
+            <span>Professional Relationships</span>
+          </div>
+
+          <div class="mini-stat">
+            <strong>20+</strong>
+            <span>Finance Events</span>
+          </div>
+
+          <div class="mini-stat">
+            <strong>312</strong>
+            <span>Market Observations</span>
+          </div>
+
+        </div>
+
+        <div class="hero-focus">
+          <span>Equity Research</span>
+          <span>Valuation</span>
+          <span>Financial Modeling</span>
+          <span>Markets</span>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =======================================================
+       ABOUT
+  ======================================================== -->
+
+  <section class="section about" id="about">
+
+    <div class="container about-grid">
+
+      <div>
+        <div class="eyebrow">About</div>
+      </div>
+
+      <div>
+
+        <p class="about-copy">
+          I enjoy going beyond the headline number and understanding
+          what actually drives a business — its competitive position,
+          industry dynamics, financial performance, valuation, and
+          long-term growth opportunities.
+        </p>
+
+        <div class="about-detail">
+
+          <p>
+            My experience spans public equity research, real estate
+            private equity, financial modeling, independent market
+            research, and student leadership.
+          </p>
+
+          <p>
+            Across each experience, I have focused on developing my
+            own conclusions and communicating them clearly using
+            financial analysis and data.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       EXPERIENCE
+  ======================================================== -->
+
+  <section class="section experience" id="experience">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="eyebrow">Experience</div>
+          <h2>
+            Applying analysis<br />
+            to real investments.
+          </h2>
+        </div>
+
+        <p>
+          Experience across public equities, private markets,
+          financial modeling, company research, and investment
+          decision-making.
+        </p>
+
+      </div>
+
+
+
+      <div class="experience-list">
+
+        <!-- SIERRA -->
+
+        <article class="experience-row">
+
+          <div class="experience-number">
+            01
+          </div>
+
+          <div class="experience-company">
+            <h3>Sierra Economic Research</h3>
+            <p>Equity Research Intern</p>
+          </div>
+
+          <div class="experience-content">
+
+            <p>
+              Conducted fundamental research on technology companies,
+              combining company analysis with financial modeling and
+              valuation.
+            </p>
+
+            <ul>
+              <li>
+                Initiated coverage on SoundHound AI, evaluating
+                profitability, valuation, competitive positioning,
+                management, and investment risks.
+              </li>
+
+              <li>
+                Built 3-statement, DCF, comparable-company, and
+                precedent-transaction models.
+              </li>
+
+              <li>
+                Identified approximately 80% downside and a ~390%
+                EV/Revenue premium before issuing a Sell recommendation.
+              </li>
+            </ul>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT DESTINED -->
+
+        <article class="experience-row">
+
+          <div class="experience-number">
+            02
+          </div>
+
+          <div class="experience-company">
+            <h3>Project Destined</h3>
+            <p>Real Estate Private Equity Intern</p>
+          </div>
+
+          <div class="experience-content">
+
+            <p>
+              Evaluated a multifamily real estate investment through
+              property-level underwriting, financing analysis, and
+              return modeling.
+            </p>
+
+            <ul>
+
+              <li>
+                Built a 10-year acquisition model incorporating rent
+                growth, NOI, CapEx, sources & uses, debt sizing, and
+                amortization.
+              </li>
+
+              <li>
+                Sized a $3.06 million loan and projected 10.7%
+                unlevered and 13.4% levered IRRs.
+              </li>
+
+              <li>
+                Evaluated exit cap rates, terminal value, revenue and
+                expense growth, and financing risks.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- LEADERSHIP -->
+
+      <div class="leadership-card">
+
+        <div>
+
+          <div class="eyebrow">
+            Leadership
+          </div>
+
+          <h3>
+            Rutgers Personal<br />
+            Finance Club
+          </h3>
+
+          <h4>
+            Director of Corporate Relations
+          </h4>
+
+        </div>
+
+
+        <div>
+
+          <p class="leadership-description">
+            Build relationships with professionals across wealth
+            management, investment banking, investment research,
+            private equity, and private credit while helping connect
+            Rutgers students with industry professionals and
+            career opportunities.
+          </p>
+
+          <div class="leadership-stats">
+
+            <div class="leadership-stat">
+              <strong>50+</strong>
+              <span>
+                Professional<br />
+                relationships
+              </span>
+            </div>
+
+            <div class="leadership-stat">
+              <strong>20+</strong>
+              <span>
+                Finance<br />
+                events
+              </span>
+            </div>
+
+            <div class="leadership-stat">
+              <strong>~120%</strong>
+              <span>
+                Growth in club<br />
+                attendance
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       PROJECTS
+  ======================================================== -->
+
+  <section class="section projects" id="projects">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="eyebrow">Selected Projects</div>
+
+          <h2>
+            Research with<br />
+            a point of view.
+          </h2>
+        </div>
+
+        <p>
+          Selected research demonstrating fundamental company
+          analysis, valuation, financial modeling, statistical
+          research, and independent investment thinking.
+        </p>
+
+      </div>
+
+
+
+      <div class="projects-grid">
+
+
+        <!-- SHERWIN WILLIAMS -->
+
+        <article class="project project-dark">
+
+          <div class="project-head">
+
+            <div>
+
+              <div class="project-type">
+                EQUITY RESEARCH
+              </div>
+
+              <div class="project-rank">
+                TOP 4 OF 65 TEAMS
+              </div>
+
+            </div>
+
+            <div class="project-index">
+              01
+            </div>
+
+          </div>
+
+
+          <div class="project-ticker">
+            NYSE: SHW
+          </div>
+
+          <h3>
+            The Sherwin-Williams Company
+            Equity Research Report
+          </h3>
+
+          <p class="project-description">
+            Led a team investment pitch analyzing Sherwin-Williams
+            through company research, industry analysis, financial
+            modeling, relative valuation, and risk assessment.
+            Developed a Buy recommendation centered on earnings
+            growth, share repurchases, expansion, and the company's
+            supply-chain moat.
+          </p>
+
+
+          <div class="project-metrics">
+
+            <div class="project-metric">
+              <strong>$27.7B</strong>
+              <span>
+                PROJECTED<br />
+                REVENUE
+              </span>
+            </div>
+
+            <div class="project-metric">
+              <strong>~440 bps</strong>
+              <span>
+                PROJECTED<br />
+                MARGIN EXPANSION
+              </span>
+            </div>
+
+            <div class="project-metric">
+              <strong>~5%</strong>
+              <span>
+                IMPLIED<br />
+                UPSIDE
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="project-tags">
+            <span>3-Statement Model</span>
+            <span>Comparable Companies</span>
+            <span>Investment Thesis</span>
+            <span>Industry Analysis</span>
+          </div>
+
+
+          <!--
+            Upload the PDF into your GitHub repository with
+            EXACTLY this filename.
+          -->
+
+          <a
+            href="sherwin-williams-equity-research.pdf"
+            target="_blank"
+            class="project-link"
+          >
+            View Full Equity Research Report
+            <span>↗</span>
+          </a>
+
+        </article>
+
+
+
+        <!-- GOLD PAPER -->
+
+        <article class="project">
+
+          <div class="project-head">
+
+            <div class="project-type">
+              INDEPENDENT MARKET RESEARCH
+            </div>
+
+            <div class="project-index">
+              02
+            </div>
+
+          </div>
+
+
+          <div class="project-ticker">
+            GOLD × S&P 500
+          </div>
+
+          <h3>
+            An Analysis of the Correlation Between Gold and S&P 500 Returns
+          </h3>
+
+          <p class="project-description">
+            Tested the conventional view that gold acts as a hedge
+            against equities by analyzing monthly gold and S&P 500
+            returns across the full sample and four periods of
+            market stress.
+          </p>
+
+
+          <div class="project-metrics">
+
+            <div class="project-metric">
+              <strong>312</strong>
+              <span>
+                MONTHLY<br />
+                OBSERVATIONS
+              </span>
+            </div>
+
+            <div class="project-metric">
+              <strong>0.0587</strong>
+              <span>
+                FULL-SAMPLE<br />
+                CORRELATION
+              </span>
+            </div>
+
+            <div class="project-metric">
+              <strong>4</strong>
+              <span>
+                CRISIS<br />
+                REGIMES
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="finding">
+
+            <small>
+              KEY FINDING
+            </small>
+
+            <p>
+              Gold showed almost no average relationship with the
+              S&P 500, while its behavior differed across the
+              Dot-Com Crash, Great Recession, COVID-19, and recent
+              geopolitical periods.
+            </p>
+
+          </div>
+
+
+          <div class="project-tags">
+            <span>Pearson Correlation</span>
+            <span>Spearman Correlation</span>
+            <span>Statistical Analysis</span>
+            <span>Market Research</span>
+          </div>
+
+
+          <!--
+            Upload the PDF into your GitHub repository with
+            EXACTLY this filename.
+          -->
+
+          <a
+            href="gold-sp500-correlation-paper.pdf"
+            target="_blank"
+            class="project-link"
+          >
+            Read Full Research Paper
+            <span>↗</span>
+          </a>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       SKILLS
+  ======================================================== -->
+
+  <section class="section skills" id="skills">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+
+          <div class="eyebrow">
+            Skills
+          </div>
+
+          <h2>
+            Investment<br />
+            toolkit.
+          </h2>
+
+        </div>
+
+        <p>
+          A combination of fundamental finance capabilities and
+          technical tools used across company research, valuation,
+          financial modeling, and data analysis.
+        </p>
+
+      </div>
+
+
+
+      <!-- RUBRIC: SKILLS SHOWCASE -->
+
+      <div class="skills-grid">
+
+
+        <div class="skill-card">
+
+          <div class="skill-card-number">
+            01
+          </div>
+
+          <h3>
+            Investment Analysis
+          </h3>
+
+          <ul class="skill-list">
+
+            <li>Equity Research</li>
+            <li>Financial Statement Analysis</li>
+            <li>Investment Research</li>
+            <li>Industry Analysis</li>
+            <li>Company Research</li>
+
+          </ul>
+
+        </div>
+
+
+
+        <div class="skill-card">
+
+          <div class="skill-card-number">
+            02
+          </div>
+
+          <h3>
+            Modeling & Valuation
+          </h3>
+
+          <ul class="skill-list">
+
+            <li>3-Statement Modeling</li>
+            <li>DCF Valuation</li>
+            <li>Comparable Companies</li>
+            <li>Precedent Transactions</li>
+            <li>Real Estate Underwriting</li>
+
+          </ul>
+
+        </div>
+
+
+
+        <div class="skill-card">
+
+          <div class="skill-card-number">
+            03
+          </div>
+
+          <h3>
+            Technical
+          </h3>
+
+          <ul class="skill-list">
+
+            <li>Microsoft Excel</li>
+            <li>PowerPoint</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Power BI</li>
+            <li>Tableau</li>
+            <li>Prompt Engineering</li>
+
+          </ul>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="language-bar">
+
+        <strong>
+          Languages
+        </strong>
+
+        <span>
+          Fluent: English & Telugu
+          &nbsp;&nbsp; / &nbsp;&nbsp;
+          Conversational: Spanish & Hindi
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       EDUCATION
+  ======================================================== -->
+
+  <section class="section education" id="education">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+
+          <div class="eyebrow">
+            Education
+          </div>
+
+          <h2>
+            Rutgers Business<br />
+            School.
+          </h2>
+
+        </div>
+
+        <p>
+          Studying finance while developing practical experience
+          across investment research, modeling, markets, and
+          student-led finance organizations.
+        </p>
+
+      </div>
+
+
+
+      <div class="education-card">
+
+        <div class="education-main">
+
+          <div>
+
+            <div class="education-label">
+              BACHELOR OF SCIENCE
+            </div>
+
+            <h3>
+              Finance
+            </h3>
+
+            <p>
+              Rutgers Business School · New Brunswick, New Jersey
+            </p>
+
+          </div>
+
+
+          <div class="gpa">
+
+            <strong>
+              4.0
+            </strong>
+
+            <span>
+              GPA / 4.0
+            </span>
+
+            <small>
+              Dean's List
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="education-extra">
+
+          <div>
+
+            <h4>
+              RELEVANT COURSEWORK
+            </h4>
+
+            <p>
+              Financial Accounting · Financial Management ·
+              Business Operations Analytics · Marketing ·
+              Management Skills
+            </p>
+
+          </div>
+
+
+
+          <div>
+
+            <h4>
+              SELECTED PROGRAMS
+            </h4>
+
+            <p>
+              MetLife Investment Management Externship ·
+              PGIM Public & Private Credit Program ·
+              Point72 Spring Sessions
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       CONTACT
+  ======================================================== -->
+
+  <section class="contact">
+
+    <div class="container contact-grid">
+
+      <div>
+
+        <small>
+          LET'S CONNECT
+        </small>
+
+        <h2>
+          Interested in markets,<br />
+          investing & great ideas.
+        </h2>
+
+      </div>
+
+
+      <div class="contact-right">
+
+        <p>
+          I'm always interested in connecting with professionals
+          and students who share an interest in investing,
+          financial markets, and company research.
+        </p>
+
+        <a
+          class="email"
+          href="mailto:rithvikjayanthi@gmail.com"
+        >
+          rithvikjayanthi@gmail.com
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Rithvik Jayanthi
+      </span>
+
+      <span>
+        Finance · Research · Investing
+      </span>
+
+      <a href="#home">
+        Back to top ↑
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
